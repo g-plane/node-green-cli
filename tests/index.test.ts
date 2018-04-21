@@ -2,7 +2,11 @@ import chalk from 'chalk'
 import logSymbols = require('log-symbols')
 import run from '../src'
 
+Object.defineProperty(process, 'version', { writable: true })
+
 test('run cli', async () => {
+  const _version = process.version
+  process.version = 'v8.11.1'
   const origin = process.stdout.write
   const mock = jest.fn()
   process.stdout.write = mock
@@ -28,5 +32,6 @@ test('run cli', async () => {
     expect.stringContaining('(Node.js: 8.11.1, V8: 6.2.414.50)')
   )
 
+  process.version = _version
   process.stdout.write = origin
 })
