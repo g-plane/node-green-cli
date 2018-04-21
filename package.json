@@ -1,0 +1,60 @@
+{
+  "name": "node-green-cli",
+  "author": {
+    "name": "Pig Fang",
+    "email": "g-plane@hotmail.com",
+    "url": "https://gplane.win/"
+  },
+  "description": "CLI for \"node-green\" module.",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g-plane/node-green-cli"
+  },
+  "private": false,
+  "keywords": [],
+  "bin": {
+    "node-green": "dist/cli.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "tslint --formatters-dir ./node_modules/tslint-formatter-beauty -t beauty -p .",
+    "build": "tsc -p .",
+    "prepublishOnly": "yarn build"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.ts$"
+  },
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "log-symbols": "^2.2.0",
+    "minimist": "^1.2.0",
+    "node-green": "^0.2.0",
+    "table": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/log-symbols": "^2.0.0",
+    "@types/minimist": "^1.2.0",
+    "@types/node": "^9.6.6",
+    "@types/table": "^4.0.4",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.3",
+    "tslint": "^5.9.1",
+    "tslint-config-gplane": "^2.3.0",
+    "tslint-formatter-beauty": "^1.2.0",
+    "typescript": "^2.8.1"
+  }
+}
