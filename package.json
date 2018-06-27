@@ -7,7 +7,7 @@
   },
   "description": "CLI for \"node-green\" module.",
   "version": "0.1.0",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/g-plane/node-green-cli"

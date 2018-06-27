@@ -39,6 +39,6 @@ $ node-green --allow-harmony Array.prototype.includes
 
 ## License
 
-Apache License 2.0
+MIT License
 
 Copyright (c) 2018-present Pig Fang
