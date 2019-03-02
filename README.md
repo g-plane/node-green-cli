@@ -4,11 +4,9 @@ CLI for [node-green](https://github.com/g-plane/node-green) module.
 
 ![](screenshot.png)
 
-[![Travis](https://img.shields.io/travis/g-plane/node-green-cli.svg?style=flat-square)](https://travis-ci.org/g-plane/node-green-cli)
-[![License](https://img.shields.io/github/license/g-plane/node-green-cli.svg?style=flat-square)](https://github.com/g-plane/node-green-cli/blob/master/LICENSE)
-[![NPM Version](https://img.shields.io/npm/v/node-green-cli.svg?style=flat-square)](https://www.npmjs.com/package/node-green-cli)
-[![NPM Downloads](https://img.shields.io/npm/dm/node-green-cli.svg?style=flat-square)](https://www.npmjs.com/package/node-green-cli)
-
+![Azure Pipelines](https://flat.badgen.net/azure-pipelines/G-Plane/G-Plane/g-plane.node-green-cli)
+![License](https://flat.badgen.net/github/license/g-plane/node-green-cli)
+![NPM Version](https://flat.badgen.net/npm/v/node-green-cli)
 ## Installation
 
 Using Yarn:
