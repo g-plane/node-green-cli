@@ -1,16 +1,17 @@
 import { table, TableUserConfig } from 'table'
 import query from 'node-green'
 import chalk from 'chalk'
-import minimist = require('minimist')
-import logSymbols = require('log-symbols')
+import minimist from 'minimist'
+import logSymbols from 'log-symbols'
 
 export default async function (argv: string[]): Promise<number> {
   const args = minimist(argv, {
     boolean: ['allow-harmony'],
-    string: ['node-version']
+    string: ['node-version'],
   })
 
   if (args.v || args.version) {
+    // eslint-disable-next-line
     process.stdout.write(`v${require('../package.json').version}\n`)
     return 0
   }
@@ -37,7 +38,7 @@ $ node-green --allow-harmony Array.prototype.includes
 
   const result = await query(args._.join(' '), {
     allowHarmony: args['allow-harmony'],
-    nodeVersion: args['node-version']
+    nodeVersion: args['node-version'],
   })
 
   const data = result.result
@@ -48,14 +49,14 @@ $ node-green --allow-harmony Array.prototype.includes
       item.feature,
       item.passed
         ? `${logSymbols.success} ${chalk.green('Yes')}`
-        : `${logSymbols.error} ${chalk.red('No')}`
+        : `${logSymbols.error} ${chalk.red('No')}`,
     ])
   data.unshift([
     chalk.cyan('ES Version'),
     chalk.cyan('Feature Type'),
     chalk.cyan('Category'),
     chalk.cyan('Feature'),
-    chalk.cyan('Availability')
+    chalk.cyan('Availability'),
   ])
 
   const config: TableUserConfig = {
@@ -64,8 +65,8 @@ $ node-green --allow-harmony Array.prototype.includes
       1: { width: 20 },
       2: { width: 20 },
       3: { width: 30 },
-      4: { width: 12 }
-    }
+      4: { width: 12 },
+    },
   }
 
   process.stdout.write(table(data, config))

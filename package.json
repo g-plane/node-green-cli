@@ -17,25 +17,20 @@
   "bin": {
     "node-green": "dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "jest",
-    "lint": "tslint --formatters-dir ./node_modules/tslint-formatter-beauty -t beauty -p .",
+    "lint": "eslint . -f=beauty --ext=.ts",
     "build": "tsc -p .",
     "prepublishOnly": "yarn build"
   },
   "jest": {
-    "verbose": true,
     "transform": {
       "^.+\\.ts$": "ts-jest"
     },
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json",
-      "node"
-    ],
-    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.ts$"
+    "testEnvironment": "node"
   },
   "dependencies": {
     "chalk": "^2.4.0",
@@ -45,16 +40,19 @@
     "table": "^4.0.3"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.3",
+    "@gplane/tsconfig": "^1.0.0",
+    "@types/jest": "^24.0.9",
     "@types/log-symbols": "^2.0.0",
     "@types/minimist": "^1.2.0",
     "@types/node": "^9.6.6",
     "@types/table": "^4.0.4",
-    "jest": "^22.4.3",
-    "ts-jest": "^22.4.3",
-    "tslint": "^5.9.1",
-    "tslint-config-gplane": "^2.3.0",
-    "tslint-formatter-beauty": "^1.2.0",
-    "typescript": "^2.8.1"
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.15.0",
+    "eslint-config-gplane": "^5.1.2",
+    "eslint-formatter-beauty": "^3.0.0",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
   }
 }
