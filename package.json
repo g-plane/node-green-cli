@@ -36,7 +36,7 @@
     "chalk": "^2.4.0",
     "log-symbols": "^2.2.0",
     "minimist": "^1.2.0",
-    "node-green": "^0.2.0",
+    "node-green": "^0.4.1",
     "table": "^4.0.3"
   },
   "devDependencies": {
