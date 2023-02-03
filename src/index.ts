@@ -1,8 +1,7 @@
 import { table, TableUserConfig } from 'table'
 import query from 'node-green'
-import chalk from 'chalk'
+import c from 'ansi-colors'
 import minimist from 'minimist'
-import logSymbols from 'log-symbols'
 
 export default async function (argv: string[]): Promise<number> {
   const args = minimist(argv, {
@@ -11,7 +10,6 @@ export default async function (argv: string[]): Promise<number> {
   })
 
   if (args.v || args.version) {
-    // eslint-disable-next-line
     process.stdout.write(`v${require('../package.json').version}\n`)
     return 0
   }
@@ -47,16 +45,14 @@ $ node-green --allow-harmony Array.prototype.includes
       item.featureType,
       item.category,
       item.feature,
-      item.passed
-        ? `${logSymbols.success} ${chalk.green('Yes')}`
-        : `${logSymbols.error} ${chalk.red('No')}`,
+      item.passed ? c.green('Yes') : c.red('No'),
     ])
   data.unshift([
-    chalk.cyan('ES Version'),
-    chalk.cyan('Feature Type'),
-    chalk.cyan('Category'),
-    chalk.cyan('Feature'),
-    chalk.cyan('Availability'),
+    c.cyan('ES Version'),
+    c.cyan('Feature Type'),
+    c.cyan('Category'),
+    c.cyan('Feature'),
+    c.cyan('Availability'),
   ])
 
   const config: TableUserConfig = {

@@ -26,15 +26,13 @@
     "prepublishOnly": "yarn build"
   },
   "dependencies": {
-    "chalk": "^2.4.0",
-    "log-symbols": "^2.2.0",
+    "ansi-colors": "^4.1.3",
     "minimist": "^1.2.7",
     "node-green": "^0.5.3",
     "table": "^6.8.1"
   },
   "devDependencies": {
     "@gplane/tsconfig": "^5.0.0",
-    "@types/log-symbols": "^2.0.0",
     "@types/minimist": "^1.2.2",
     "@types/node": "^18.11.18",
     "@types/table": "^6.3.2",
