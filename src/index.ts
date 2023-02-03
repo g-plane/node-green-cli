@@ -15,7 +15,8 @@ export default async function (argv: string[]): Promise<number> {
   }
 
   if (args.h || args.help) {
-    process.stdout.write(`
+    process.stdout.write(
+      `
 A CLI tool for checking Node.js ECMAScript compatibility.
 Author: Pig Fang <g-plane@hotmail.com>
 
@@ -30,7 +31,8 @@ Examples:
 $ node-green Array.prototype.includes
 $ node-green --node-version=6.4.0 Array.prototype.includes
 $ node-green --allow-harmony Array.prototype.includes
-`.slice(1))
+`.slice(1)
+    )
     return 0
   }
 
@@ -39,14 +41,13 @@ $ node-green --allow-harmony Array.prototype.includes
     nodeVersion: args['node-version'],
   })
 
-  const data = result.result
-    .map(item => [
-      item.esVersion,
-      item.featureType,
-      item.category,
-      item.feature,
-      item.passed ? c.green('Yes') : c.red('No'),
-    ])
+  const data = result.result.map((item) => [
+    item.esVersion,
+    item.featureType,
+    item.category,
+    item.feature,
+    item.passed ? c.green('Yes') : c.red('No'),
+  ])
   data.unshift([
     c.cyan('ES Version'),
     c.cyan('Feature Type'),

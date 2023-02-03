@@ -1,4 +1,4 @@
-import { expect, test, vi } from "vitest";
+import { expect, test, vi } from 'vitest'
 import chalk from 'chalk'
 import run from '../src'
 
@@ -8,11 +8,9 @@ test('run cli', async () => {
   const mock = vi.fn()
   process.stdout.write = mock
 
-  await expect(run([
-    '--node-version=19.0.0',
-    'Function.prototype.toString',
-    'revision',
-  ])).resolves.toBe(0)
+  await expect(
+    run(['--node-version=19.0.0', 'Function.prototype.toString', 'revision'])
+  ).resolves.toBe(0)
 
   const [[table]]: string[][] = mock.mock.calls
   expect(table).toEqual(expect.stringContaining(chalk.cyan('ES Version')))

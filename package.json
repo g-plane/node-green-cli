@@ -22,8 +22,9 @@
   ],
   "scripts": {
     "test": "vitest",
+    "fmt": "prettier --write src tests",
     "build": "tsc -p .",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "ansi-colors": "^4.1.3",
@@ -35,6 +36,7 @@
     "@gplane/tsconfig": "^5.0.0",
     "@types/minimist": "^1.2.2",
     "@types/node": "^18.11.18",
+    "prettier": "^2.8.3",
     "typescript": "^4.9.4",
     "vitest": "^0.28.3"
   }
