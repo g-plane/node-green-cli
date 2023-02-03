@@ -22,7 +22,6 @@
   ],
   "scripts": {
     "test": "jest",
-    "lint": "eslint . -f=beauty --ext=.ts",
     "build": "tsc -p .",
     "prepublishOnly": "yarn build"
   },
@@ -46,11 +45,6 @@
     "@types/minimist": "^1.2.0",
     "@types/node": "^9.6.6",
     "@types/table": "^4.0.4",
-    "@typescript-eslint/eslint-plugin": "^1.4.2",
-    "@typescript-eslint/parser": "^1.4.2",
-    "eslint": "^5.15.0",
-    "eslint-config-gplane": "^5.1.2",
-    "eslint-formatter-beauty": "^3.0.0",
     "jest": "^24.1.0",
     "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
