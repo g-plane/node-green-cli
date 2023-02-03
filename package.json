@@ -34,17 +34,17 @@
   "dependencies": {
     "chalk": "^2.4.0",
     "log-symbols": "^2.2.0",
-    "minimist": "^1.2.0",
-    "node-green": "^0.4.1",
-    "table": "^4.0.3"
+    "minimist": "^1.2.7",
+    "node-green": "^0.5.0",
+    "table": "^6.8.1"
   },
   "devDependencies": {
-    "@gplane/tsconfig": "^1.0.0",
+    "@gplane/tsconfig": "^5.0.0",
     "@types/jest": "^24.0.9",
     "@types/log-symbols": "^2.0.0",
-    "@types/minimist": "^1.2.0",
-    "@types/node": "^9.6.6",
-    "@types/table": "^4.0.4",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.11.18",
+    "@types/table": "^6.3.2",
     "jest": "^24.1.0",
     "ts-jest": "^24.0.0",
     "typescript": "^3.3.3333"
