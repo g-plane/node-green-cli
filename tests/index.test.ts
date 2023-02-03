@@ -1,13 +1,15 @@
+import { expect, test, vi } from "vitest";
 import chalk from 'chalk'
 import run from '../src'
 
 Object.defineProperty(process, 'version', { writable: true })
 
 test('run cli', async () => {
-  const mock = jest.fn()
+  const mock = vi.fn()
   process.stdout.write = mock
 
   await expect(run([
+    '--node-version=19.0.0',
     'Function.prototype.toString',
     'revision',
   ])).resolves.toBe(0)
