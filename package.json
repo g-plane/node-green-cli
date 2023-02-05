@@ -6,7 +6,7 @@
     "url": "https://gplane.win/"
   },
   "description": "CLI for \"node-green\" module.",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "MIT",
   "repository": {
     "type": "git",
